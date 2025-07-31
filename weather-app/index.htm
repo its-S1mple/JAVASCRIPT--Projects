@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WEATHER APP</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+        </style>
+    </head>
+    <body>
+        <div id="container" role="main" aria-label="Weather Application">
+            <h1>Weather App</h1>
+            <div id="input-container">
+                <label for="city-name" class="visually-hidden">Enter city name</label>
+                <input
+                    type="text"
+                    id="city-name"
+                    placeholder="Enter city name"
+                    aria-required="true"
+                    aria-describedby="error-message"
+                />
+                <button type="button" id="btn" aria-label="Get Weather">Get Weather</button>
+            </div>
+            <div id="loading" class="hidden" role="status" aria-live="polite" aria-atomic="true">
+                Loading weather data...
+            </div>
+            <div id="weather-info" class="hidden" aria-live="polite" aria-atomic="true">
+                <h2 id="city"></h2>
+                <p id="temperature"></p>
+                <p id="description"></p>
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
+                <p id="pressure"></p>
+                <p id="sunrise"></p>
+                <p id="sunset"></p>
+            </div>
+            <p id="error-message" class="hidden" role="alert"></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

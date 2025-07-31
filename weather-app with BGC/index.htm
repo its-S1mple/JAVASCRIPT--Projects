@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App by Blackbox</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app-container">
+    <h1>Weather App</h1>
+    <div id="input-container">
+      <input type="text" id="city-input" placeholder="Enter city name" />
+      <button id="search-btn">Get Weather</button>
+    </div>
+    <div id="weather-display" class="hidden">
+      <h2 id="city-name"></h2>
+      <p id="weather-desc"></p>
+      <p id="temperature"></p>
+      <p id="humidity"></p>
+      <p id="wind-speed"></p>
+      <p id="pressure"></p>
+      <p id="sunrise"></p>
+      <p id="sunset"></p>
+    </div>
+    <p id="error-msg" class="hidden"></p>
+    <p id="loading-msg" class="hidden">Loading...</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

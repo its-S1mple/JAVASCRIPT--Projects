@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.8s ease;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+#app-container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 15px;
+  border-radius: 15px;
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+#input-container {
+  display: flex;
+  margin: 15px 10px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 400px) {
+  #app-container {
+    padding: 15px 20px;
+    max-width: 90%;
+  }
+
+  #city-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #search-btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 300px) {
+  #input-container {
+    flex-direction: column;
+  }
+
+  #city-input {
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 8px;
+  }
+
+  #search-btn {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+#city-input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  min-width: 0;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+#city-input:focus {
+  outline: none;
+  box-shadow: inset 0 0 8px rgba(30, 144, 255, 0.8);
+}
+
+#search-btn {
+  padding: 10px;
+  border: none;
+  background-color: #1e90ff;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease transform 0.3s ease;
+  flex-shrink: 0;
+  width: 100px;
+  max-width: 100px;
+
+}
+
+#search-btn:hover {
+  cursor: pointer;
+  background-color: #1c86ee;
+  box-shadow: 0 4px 8px rgba(28, 134, 238, 0.8);
+  transform: scale(1.1);
+}
+
+#search-btn:hover {
+  background-color: #1c86ee;
+}
+
+.hidden {
+  display: none;
+}
+
+#weather-display p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* Background classes for weather conditions */
+.rainy {
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
+}
+
+.summer {
+  background-image: url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1350&q=80');
+}
+
+.winter {
+  background-image: url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1350&q=80');
+}
+
+.clear {
+  background-image: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1350&q=80');
+}

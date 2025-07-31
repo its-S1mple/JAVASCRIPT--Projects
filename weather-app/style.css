@@ -1,0 +1,101 @@
+body {
+    background-color: #2b2d42;
+    margin: 0;
+    padding: 0;
+    font-family: 'orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    border: 2px solid #8e9aaf;
+    box-shadow: 0 0 10px #636c7c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8e9aaf;
+    border-radius: 10px;
+    color: #2b2d42;
+}
+
+#input-container {
+    margin: 15px 10px;
+    gap: 10px;
+    display: flex;
+}
+
+#city-name {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#city-name:focus {
+    outline: solid rgb(34, 154, 239);
+}
+
+#btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #62b6cb;
+    color: #33415c;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#btn:hover {
+    cursor: pointer;
+    background-color: #5fa8d3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(95, 168, 211, 0.8);
+}
+
+.hidden {
+    display: none;
+}
+
+#loading {
+    margin: 10px 0;
+    font-style: italic;
+    color: #33415c;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+@media (max-width: 307px) {
+    #input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #input-container input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
